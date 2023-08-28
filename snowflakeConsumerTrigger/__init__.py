@@ -15,7 +15,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
         # Haal Snowflake-inloggegevens uit Key Vault
         snowflake_account_url = secret_client.get_secret("SnowflakeAccount").value
-        snowflake_username = secret_client.get_secret("SnowflakeUser").value
+        snowflake_username = secret_client.get_secret("SnowflakeUsername").value
         snowflake_password = secret_client.get_secret("SnowflakePassword").value
 
         # Maak verbinding met Snowflake
